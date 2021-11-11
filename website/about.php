@@ -7,7 +7,7 @@
 </div>
 
 <main>
-    <div class = "container">
+    <div class = "container-fluid">
        
     </div>
 </main>
