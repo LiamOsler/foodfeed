@@ -3,4 +3,4 @@
 </body>
 </html>
 
-<script src="scripts/mapping.js"></script>
+<script src="scripts/scripts.js"></script>

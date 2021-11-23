@@ -22,3 +22,19 @@ FROM `userSaltAndPepper`;
 
  INSERT INTO `userHashes` VALUES 
 ('a1ce0152e0fe13f98f550d34695ee2d9', MD5(CONCAT('{$userSalt}', md5('{$password}'),'{$userPepper}')));
+
+INSERT INTO `restaurantChains` VALUES
+(NULL, "Big Kahuna Burger", "This is a tasty burger.", "bigkahuna.com")
+(NULL, "The Krusty Krab", "Come spend your money here!", "krustykrab.com")
+
+;
+
+INSERT INTO `restaurantChainCategories` VALUES
+(NULL, "Hawaiian"),
+(NULL, "Seafood");
+
+
+INSERT INTO `restaurantChainCategorization` VALUES
+(1, 1);
+(2, 2);
+

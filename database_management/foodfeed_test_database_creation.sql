@@ -33,9 +33,25 @@ CREATE TABLE userHashes(
     
 CREATE TABLE restaurantChains(
 	chainID int AUTO_INCREMENT,
+    chainName varchar(255),
+    chainDescription varchar(255),
+    chainWebsite varchar(255),
     PRIMARY KEY (chainID)
     );
+
+CREATE TABLE restaurantChainCategories(
+	categoryID int AUTO_INCREMENT,
+    categoryName varchar(255),
+    PRIMARY KEY (categoryID)
+    );
     
+CREATE TABLE restaurantChainCategorization(
+    chainID int,
+    categoryID int,
+    FOREIGN KEY (chainID) REFERENCES restaurantChains(chainID),
+    FOREIGN KEY (categoryID) REFERENCES restaurantChainCategories(categoryID)
+    );
+
 CREATE TABLE restaurantLocations(
 	locationID int AUTO_INCREMENT,
     chainID int,
