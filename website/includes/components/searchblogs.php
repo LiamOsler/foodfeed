@@ -11,7 +11,7 @@ function showResult(str) {
     }
 
   }
-  xmlhttp.open("GET","includes/components/searchresults.php?searchQuery="+str, true);
+  xmlhttp.open("GET","includes/components/searchblogsresults.php?searchQuery="+str, true);
   xmlhttp.send();
 }
 
@@ -21,9 +21,9 @@ function showResult(str) {
 
 <div class="search-container">
     <form  class="form">
-        <input type="text" class="form-control" id="homepagesearchbar" placeholder="Search" size="30" onkeyup="showResult(this.value)">
+        <input type="text" class="form-control" placeholder="Search" size="30" onkeyup="showResult(this.value)">
         <button type="submit" class="search-button">
-        <img src="images/search.jpg">
+        <img src="icons/search.png">
         </button>
 
         

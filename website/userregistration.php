@@ -1,4 +1,3 @@
-
 <?php
 include "db/db.php";
 include "functions/functions.php";
@@ -87,8 +86,8 @@ if($registrationValid == TRUE){
         }
     }
 
-}
+}?>
 
-header("Location: index.php");
-
-?>
+<script type="text/javascript">
+    {window.location.replace("index.php");}
+</script>

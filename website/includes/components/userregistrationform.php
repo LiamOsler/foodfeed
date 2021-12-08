@@ -132,6 +132,12 @@ function showEmailResult(str) {
         </label>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" style="padding: 0px; text-align: center;">
     <button class="btn btn-success btn-lg" type="submit">Create Account <i class="bi-person-plus" style="font-size: 1rem;"></i></button>
+    </div>
+    <div class="col-md-4"></div>
+</div>
 </form>
 

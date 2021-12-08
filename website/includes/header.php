@@ -30,7 +30,8 @@
 
     <link href="styles/main.css" rel="stylesheet">
 
-    <title>food • feed</title>
+    <title>FoodFeed</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.jpg"/>
 </head>
 <body>
 
