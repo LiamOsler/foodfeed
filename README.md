@@ -9,7 +9,6 @@
 * *Branch URL*: <https://github.com/SanketShah34/foodfeed/tree/master>
 * *Team Management Tool*: <https://cscix691team6.atlassian.net/jira/software/projects/T6/boards/1/roadmap>
 * Pitch Link: <https://www.youtube.com/watch?v=GABwksmlQbE>
-* 
 
 
 ## Getting Started
