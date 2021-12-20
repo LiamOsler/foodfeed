@@ -28,15 +28,15 @@ Explanation:
 CREATE TABLE users (
     userID int AUTO_INCREMENT,
     privateID varchar(255),
-	userName varchar(255),
-	firstName varchar(255),
+    userName varchar(255),
+    firstName varchar(255),
     lastName varchar(255),
-	emailAddress varchar(255),
-	registrationDate datetime,
+    emailAddress varchar(255),
+    registrationDate datetime,
     verificationStatus bool,
     profileVisibility bool,
     PRIMARY KEY (userID),
-	INDEX NAME (privateID)
+    INDEX NAME (privateID)
 );
 
 ```
