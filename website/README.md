@@ -2,4 +2,4 @@
 
 This is the README file describing the website development aspects of the project.
 
-Team FoodFeed.
+Team FoodFeed. Word Hello.
