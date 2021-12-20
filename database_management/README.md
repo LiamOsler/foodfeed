@@ -65,16 +65,17 @@ Explanation:
 
 Hashed user passwords:
 ```sql
-CREATE TABLE userHashes(
+CREATE TABLE user_hashes(
     privateid varchar(255),
     passwordhash varchar(128),
-    PRIMARY KEY (privateID)
+    PRIMARY KEY (privateid)
     );
 ```
+Explanation: 
 
 User salt and peppers:
 ```sql
-CREATE TABLE userSaltAndPepper(
+CREATE TABLE user_salt(
     privateid varchar(255),
     usersalt varchar(128),
     userpepper varchar(128),

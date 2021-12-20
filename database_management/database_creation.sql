@@ -1,6 +1,14 @@
+--
+-- FoodFeed database schema definition
+--
+
 DROP SCHEMA IF EXISTS foodfeed_db;
 CREATE SCHEMA IF NOT EXISTS foodfeed_db;
 USE foodfeed_db;
+
+--
+-- Tables related to user infomation:
+--
 
 CREATE TABLE users (
     userid int AUTO_INCREMENT,
@@ -20,16 +28,22 @@ CREATE TABLE users (
     INDEX NAME (privateid)
 );
 
-CREATE TABLE userHashes(
+CREATE TABLE user_hashes(
     privateid varchar(255),
     passwordhash varchar(128),
     PRIMARY KEY (privateid)
     );
 
-CREATE TABLE userSaltAndPepper(
+CREATE TABLE user_salt(
     privateid varchar(255),
     usersalt varchar(128),
     userpepper varchar(128),
     PRIMARY KEY (privateID)
     );
+
+--
+-- Tables related to restaurants:
+--
+
+CREATE TABLE 
     
