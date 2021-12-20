@@ -6,10 +6,10 @@ CREATE TABLE users (
     userid int AUTO_INCREMENT,
     privateid varchar(255),
     username varchar(255),
-    fname varchar(255),
-    lname varchar(255),
     email varchar(255),
     phone varchar(32),
+    fname varchar(255),
+    lname varchar(255),
     street_address varchar(255),
     city varchar(255),
     province varchar(255),
@@ -19,3 +19,17 @@ CREATE TABLE users (
     PRIMARY KEY (userid),
     INDEX NAME (privateid)
 );
+
+CREATE TABLE userHashes(
+    privateid varchar(255),
+    passwordhash varchar(128),
+    PRIMARY KEY (privateid)
+    );
+
+CREATE TABLE userSaltAndPepper(
+    privateid varchar(255),
+    usersalt varchar(128),
+    userpepper varchar(128),
+    PRIMARY KEY (privateID)
+    );
+    
