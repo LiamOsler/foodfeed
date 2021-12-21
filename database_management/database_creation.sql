@@ -64,3 +64,10 @@ CREATE TABLE restaurants(
     r_rating DOUBLE,
     PRIMARY KEY (r_id)
     );
+
+CREATE TABLE menu_items(
+    m_id INT AUTO_INCREMENT,
+    m_name VARCHAR(255),
+    m_category VARCHAR(255),
+    m_category VARCHAR(255),
+)

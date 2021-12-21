@@ -47,8 +47,8 @@ CREATE TABLE users (
 
 ```
 Explanation:
-- u_id: The user's public identification number
-- u_private_id: The user's private identification number
+- u_id: The user's public identification number (unique, incremental)
+- u_private_id: The user's private identification number (unique, randomized)
 - u_username: the user's display name
 - u_email: the user's registered email address
 - u_phone: the user's phone number
@@ -128,4 +128,6 @@ Explanation:
 - r_hour_open: the hour the restaurant opens at: (####) 24H format, e.g. (1200)
 - r_hour_close: the hour the restaurant closes at: (####) 24H format, e.g. (2100)
 - r_rating: the restaurant's rating on a scale of 1-5
+
+## Restaurant menu items:
 
