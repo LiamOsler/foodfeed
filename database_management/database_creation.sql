@@ -9,7 +9,6 @@ USE foodfeed_db;
 --
 -- Tables related to user infomation:
 --
-
 CREATE TABLE users (
     u_id INT AUTO_INCREMENT,
     u_private_id VARCHAR(255),
@@ -67,7 +66,9 @@ CREATE TABLE restaurants(
 
 CREATE TABLE menu_items(
     m_id INT AUTO_INCREMENT,
+    r_id INT,
     m_name VARCHAR(255),
     m_category VARCHAR(255),
     m_category VARCHAR(255),
+    PRIMARY KEY (m_id),
 )

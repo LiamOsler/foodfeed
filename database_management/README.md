@@ -131,3 +131,17 @@ Explanation:
 
 ## Restaurant menu items:
 
+```sql
+CREATE TABLE menu_items(
+    m_id INT AUTO_INCREMENT,
+    r_id INT,
+    m_name VARCHAR(255),
+    m_category VARCHAR(255),
+    PRIMARY KEY (m_id),
+)
+```
+Explanation:
+m_id: the menu item's id number
+r_id: the restaurant the menu item is associated with
+m_name: the name of the menu item
+m_category: the categorization of the item type
