@@ -11,41 +11,56 @@ USE foodfeed_db;
 --
 
 CREATE TABLE users (
-    userid int AUTO_INCREMENT,
-    privateid varchar(255),
-    username varchar(255),
-    email varchar(255),
-    phone varchar(32),
-    fname varchar(255),
-    lname varchar(255),
-    location_lat varchar(16),
-    location_long varchar(16),
-    street_address varchar(255),
-    city varchar(255),
-    province varchar(255),
-    postal_code varchar(8),
-    registration_date datetime,
-    verification_status bool,
+    u_id INT AUTO_INCREMENT,
+    u_private_id VARCHAR(255),
+    u_username VARCHAR(255),
+    u_email VARCHAR(255),
+    u_phone VARCHAR(32),
+    u_fname VARCHAR(255),
+    u_lname VARCHAR(255),
+    u_lat DECIMAL(10,8),
+    u_long DECIMAL(10,8),
+    u_street VARCHAR(255),
+    u_city VARCHAR(255),
+    u_province VARCHAR(32),
+    u_postal VARCHAR(32),
+    u_register_date datetime,
+    u_ver_status bool,
     PRIMARY KEY (userid),
     INDEX NAME (privateid)
 );
 
 CREATE TABLE user_hashes(
-    privateid varchar(255),
-    password_hash varchar(128),
+    u_private_id VARCHAR(255),
+    u_hash VARCHAR(128),
     PRIMARY KEY (privateid)
     );
 
 CREATE TABLE user_salt(
-    privateid varchar(255),
-    salt varchar(128),
-    pepper varchar(128),
-    PRIMARY KEY (privateID)
+    u_private_id VARCHAR(255),
+    u_salt VARCHAR(128),
+    u_pepper VARCHAR(128),
+    PRIMARY KEY (privateid)
     );
 
 --
 -- Tables related to restaurants:
 --
-
-CREATE TABLE 
-    
+CREATE TABLE restaurants(
+    r_id INT AUTO_INCREMENT,
+    r_name	VARCHAR(255),
+    r_email VARCHAR(255),
+    r_phone VARCHAR(32),
+    r_category VARCHAR(255),	
+    r_street VARCHAR(255),
+    r_city VARCHAR(255),	
+    r_province VARCHAR(32),
+    r_postal VARCHAR(32),
+    r_lat DECIMAL(10,8),
+    r_long DECIMAL(10,8),	
+    r_website	VARCHAR(255),
+    r_hour_open INT,
+    r_hour_close INT,
+    r_rating DOUBLE,
+    PRIMARY KEY (restaurantid)
+    );

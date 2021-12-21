@@ -11,7 +11,6 @@ Run the contents of database_creation.sql
 Run the contents of database_population.sql after running database_creation.sql
 
 # The Database Schema:
-
 ## Defining the schema:
 ```sql
 DROP SCHEMA IF EXISTS foodfeed_db;
@@ -24,55 +23,52 @@ Explanation:
 3. Tell the server to use "foodfeed_db"
 
 ## Defining a schema for user accounts:
-
 ### User account information:
 ```sql
 CREATE TABLE users (
-    userid int AUTO_INCREMENT,
-    privateid varchar(255),
-    username varchar(255),
-    email varchar(255),
-    phone varchar(32),
-    fname varchar(255),
-    lname varchar(255),
-    location_lat varchar(16),
-    location_long varchar(16),
-    street_address varchar(255),
-    city varchar(255),
-    province varchar(255),
-    postal_code varchar(8),
-    registration_date datetime,
-    verification_status bool,
+    u_id INT AUTO_INCREMENT,
+    u_private_id VARCHAR(255),
+    u_username VARCHAR(255),
+    u_email VARCHAR(255),
+    u_phone VARCHAR(32),
+    u_fname VARCHAR(255),
+    u_lname VARCHAR(255),
+    u_lat DECIMAL(10,8),
+    u_long DECIMAL(10,8),
+    u_street VARCHAR(255),
+    u_city VARCHAR(255),
+    u_province VARCHAR(32),
+    u_postal VARCHAR(32),
+    u_register_date datetime,
+    u_ver_status bool,
     PRIMARY KEY (userid),
     INDEX NAME (privateid)
 );
 
 ```
 Explanation:
-- userid: The user's public identification number
-- privateid: The user's private identification number
-- username: the user's display name
-- email: the user's registered email address
-- phone: the user's phone number
-- fname: the user's first name
-- lname: user's last name (surname)
-- location_lat: the user's latitude
-- location_long: the user's longitude
-- street_address: the user's street address (unit/street number, street name)
-- city: the name of the user's city
-- province: the code for the user's province (ISO standard)
-- postal_code: the user's postal code
-- registration_date: the datetime that the user account was registered
-- verification_status: boolean for tracking if the account's email has been confirmed
-
+- u_id: The user's public identification number
+- u_private_id: The user's private identification number
+- u_username: the user's display name
+- u_email: the user's registered email address
+- u_phone: the user's phone number
+- u_fname: the user's first name
+- u_lname: user's last name (surname)
+- u_lat: the user's latitude
+- u_long: the user's longitude
+- u_street: the user's street address (unit/street number, street name)
+- u_city: the name of the user's city
+- u_province: the code for the user's province (ISO standard)
+- u_postal: the user's postal code
+- u_register_date: the datetime that the user account was registered
+- u_ver_status: boolean for tracking if the account's email has been confirmed
 
 ### Storing hashed user passwords:
-
 Hashed user passwords:
 ```sql
 CREATE TABLE user_hashes(
-    privateid varchar(255),
-    password_hash varchar(128),
+    u_private_id VARCHAR(255),
+    u_hash VARCHAR(128),
     PRIMARY KEY (privateid)
     );
 ```
@@ -83,10 +79,53 @@ Explanation:
 User salt and peppers:
 ```sql
 CREATE TABLE user_salt(
-    privateid varchar(255),
-    salt varchar(128),
-    pepper varchar(128),
-    PRIMARY KEY (privateID)
+    u_password_hash VARCHAR(255),
+    u_salt VARCHAR(128),
+    u_pepper VARCHAR(128),
+    PRIMARY KEY (privateiD)
     );
 ```
+Explanation:
+- privateid: the privateid of the user that the salt and pepper corresponds to
+- salt: a value that gets added to the beginning of the user password hash
+- pepper: a value that gets added to the ending of the user password hash
+
+### Storing the restaurant information:
+## Restaurant Locations:
+```sql
+CREATE TABLE restaurants(
+    r_id INT AUTO_INCREMENT,
+    r_name	VARCHAR(255),
+    r_email VARCHAR(255),
+    r_phone VARCHAR(32),
+    r_category VARCHAR(255),	
+    r_street VARCHAR(255),
+    r_city VARCHAR(255),	
+    r_province VARCHAR(32),
+    r_postal VARCHAR(32),
+    r_lat DECIMAL(10,8),
+    r_long DECIMAL(10,8),	
+    r_website	VARCHAR(255),
+    r_hour_open INT,
+    r_hour_close INT,
+    r_rating DOUBLE,
+    PRIMARY KEY (restaurantid)
+    );
+```
+
+- r_id: the restaurant's id number
+- r_name: the name of the restaurant
+- r_email: the email address of the restaurant
+- r_phone: the phone number of the restaurant
+- r_category: the restaurant's categorization
+- r_street: the restaurant's street address
+- r_city: the city the restaurant is in
+- r_province: the province the restaurant is in
+- r_postal: the restaurant's postal code
+- r_lat: the restaurant's latitude 
+- r_long: the restaurant's longitude
+- r_website: the restaurant's website URL
+- r_hour_open: the hour the restaurant opens at: (####) 24H format, e.g. (1200)
+- r_hour_close: the hour the restaurant closes at: (####) 24H format, e.g. (2100)
+- r_rating: the restaurant's rating on a scale of 1-5
 
