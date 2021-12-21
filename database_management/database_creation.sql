@@ -69,6 +69,5 @@ CREATE TABLE menu_items(
     r_id INT,
     m_name VARCHAR(255),
     m_category VARCHAR(255),
-    m_category VARCHAR(255),
-    PRIMARY KEY (m_id),
+    PRIMARY KEY (m_id)
 )
