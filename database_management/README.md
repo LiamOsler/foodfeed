@@ -35,10 +35,12 @@ CREATE TABLE users (
     phone varchar(32),
     fname varchar(255),
     lname varchar(255),
+    location_lat varchar(16),
+    location_long varchar(16),
     street_address varchar(255),
     city varchar(255),
     province varchar(255),
-    postal_code varchar(5),
+    postal_code varchar(8),
     registration_date datetime,
     verification_status bool,
     PRIMARY KEY (userid),
@@ -54,9 +56,12 @@ Explanation:
 - phone: the user's phone number
 - fname: the user's first name
 - lname: user's last name (surname)
+- location_lat: the user's latitude
+- location_long: the user's longitude
 - street_address: the user's street address (unit/street number, street name)
 - city: the name of the user's city
 - province: the code for the user's province (ISO standard)
+- postal_code: the user's postal code
 - registration_date: the datetime that the user account was registered
 - verification_status: boolean for tracking if the account's email has been confirmed
 
@@ -67,18 +72,20 @@ Hashed user passwords:
 ```sql
 CREATE TABLE user_hashes(
     privateid varchar(255),
-    passwordhash varchar(128),
+    password_hash varchar(128),
     PRIMARY KEY (privateid)
     );
 ```
 Explanation: 
+- privateid: the privateid of the user that the password_hash corresponds to
+- password_hash: the user's hashed password
 
 User salt and peppers:
 ```sql
 CREATE TABLE user_salt(
     privateid varchar(255),
-    usersalt varchar(128),
-    userpepper varchar(128),
+    salt varchar(128),
+    pepper varchar(128),
     PRIMARY KEY (privateID)
     );
 ```

@@ -18,26 +18,28 @@ CREATE TABLE users (
     phone varchar(32),
     fname varchar(255),
     lname varchar(255),
+    location_lat varchar(16),
+    location_long varchar(16),
     street_address varchar(255),
     city varchar(255),
     province varchar(255),
-    postal_code varchar(255),
+    postal_code varchar(8),
     registration_date datetime,
-    verificationStatus bool,
+    verification_status bool,
     PRIMARY KEY (userid),
     INDEX NAME (privateid)
 );
 
 CREATE TABLE user_hashes(
     privateid varchar(255),
-    passwordhash varchar(128),
+    password_hash varchar(128),
     PRIMARY KEY (privateid)
     );
 
 CREATE TABLE user_salt(
     privateid varchar(255),
-    usersalt varchar(128),
-    userpepper varchar(128),
+    salt varchar(128),
+    pepper varchar(128),
     PRIMARY KEY (privateID)
     );
 
