@@ -141,7 +141,7 @@ CREATE TABLE menu_items(
 )
 ```
 Explanation:
-m_id: the menu item's id number
-r_id: the restaurant the menu item is associated with
-m_name: the name of the menu item
-m_category: the categorization of the item type
+- m_id: the menu item's id number
+- r_id: the restaurant the menu item is associated with
+- m_name: the name of the menu item
+- m_category: the categorization of the item type
