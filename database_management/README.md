@@ -41,8 +41,8 @@ CREATE TABLE users (
     u_postal VARCHAR(32),
     u_register_date datetime,
     u_ver_status bool,
-    PRIMARY KEY (userid),
-    INDEX NAME (privateid)
+    PRIMARY KEY (u_id),
+    INDEX NAME (u_private_id)
 );
 
 ```
@@ -69,7 +69,7 @@ Hashed user passwords:
 CREATE TABLE user_hashes(
     u_private_id VARCHAR(255),
     u_hash VARCHAR(128),
-    PRIMARY KEY (privateid)
+    PRIMARY KEY (u_private_id)
     );
 ```
 Explanation: 
@@ -79,10 +79,10 @@ Explanation:
 User salt and peppers:
 ```sql
 CREATE TABLE user_salt(
-    u_password_hash VARCHAR(255),
+    u_private_id VARCHAR(255),
     u_salt VARCHAR(128),
     u_pepper VARCHAR(128),
-    PRIMARY KEY (privateiD)
+    PRIMARY KEY (u_private_id)
     );
 ```
 Explanation:
@@ -109,10 +109,10 @@ CREATE TABLE restaurants(
     r_hour_open INT,
     r_hour_close INT,
     r_rating DOUBLE,
-    PRIMARY KEY (restaurantid)
+    PRIMARY KEY (r_id)
     );
 ```
-
+Explanation:
 - r_id: the restaurant's id number
 - r_name: the name of the restaurant
 - r_email: the email address of the restaurant
