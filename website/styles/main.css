@@ -24,11 +24,15 @@
   object-fit: cover;
 }
 
-.lean-canvas .card{
+.card{
     margin-bottom: 2em;
-    border-color: rgba(0, 0, 0, 0);
+    /* border-color: rgba(0, 0, 0, 0); */
 }
 
 .jumbotron-search{
   min-height: 100vh;
+}
+
+.card-footer{
+  margin-top: auto;
 }
