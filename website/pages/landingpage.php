@@ -7,3 +7,15 @@
     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
   </p>
 </div>
+
+<div class="col-md-12 lean-canvas">
+  <div class="card" style="">
+      <div class="card-body">
+          <h5 class="card-title"> <i class="bi bi-shop"></i> Store Item Demo</h5>
+          <p class="card-text">
+          Search for an item:
+          <?php include '../inc/components/searcharea.php'; ?> 
+          </p>
+      </div>
+  </div>
+</div>
