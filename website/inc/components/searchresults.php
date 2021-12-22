@@ -5,7 +5,7 @@
 
 <div class="container-fluid">
 <br>
-<p>Results:</p>
+<p>Restaurants:</p>
 <div class="row">
   <?php
     // If the search query string is set
@@ -37,20 +37,17 @@
           $r_rating = $current["r_rating"];
           ?>
           <div class = "col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
-            <div class="card">
             <?php echo $r_id;?>
               <img class="card-img-top" src="images/hotsauce.png" alt="Card image cap">
               <div class="card-body">
               <h5 class="card-title"><?php echo $r_name;?></h5>
-                  <p class="card-text">$3.99</p>
+              <p class="card-text"><?php echo $r_category;?></p>
               </div>
-            </div>
           </div>
           <?php
         }
       }
     }
-
   ?>
   </div>
 </div>
