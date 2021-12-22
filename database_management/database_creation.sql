@@ -46,28 +46,25 @@ CREATE TABLE user_salt(
 -- Tables related to restaurants:
 --
 CREATE TABLE restaurants(
-    r_id INT AUTO_INCREMENT,
-    r_name	VARCHAR(255),
-    r_email VARCHAR(255),
-    r_phone VARCHAR(32),
-    r_category VARCHAR(255),	
-    r_street VARCHAR(255),
-    r_city VARCHAR(255),	
-    r_province VARCHAR(32),
-    r_postal VARCHAR(32),
-    r_lat DECIMAL(10,8),
-    r_long DECIMAL(10,8),	
-    r_website	VARCHAR(255),
+    r_id INT,
+    r_name TEXT,
+    r_phone TEXT,
+    r_category TEXT,	
+    r_street TEXT,
+    r_city TEXT,	
+    r_province TEXT,
+    r_postal TEXT,
+    r_lat DOUBLE,
+    r_long DOUBLE,	
+    r_website TEXT,
     r_hour_open INT,
     r_hour_close INT,
     r_rating DOUBLE,
-    PRIMARY KEY (r_id)
     );
 
 CREATE TABLE menu_items(
-    m_id INT AUTO_INCREMENT,
+    m_id INT,
     r_id INT,
-    m_name VARCHAR(255),
-    m_category VARCHAR(255),
-    PRIMARY KEY (m_id)
+    m_name TEXT,
+    m_category TEXT
 )
