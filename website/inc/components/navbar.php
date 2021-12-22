@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light ">
   <a class="navbar-brand" id ="landing-page" href="#">Food Feed</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	<span class="navbar-toggler-icon"></span>
@@ -17,7 +17,7 @@
 	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 		<a class="dropdown-item" href="#"><i class="bi-geo-alt-fill"></i> Default Location</a>
 		<a class="dropdown-item" href="#"><i class="bi-credit-card"></i> Payment Info</a>
-		<a class="dropdown-item" href="#"><i class="bi-mail"></i> Contact Info</a>
+		<a class="dropdown-item" href="#"><i class="bi-telephone"></i> Contact Info</a>
 	</div>
 	</div>
 	</li>
