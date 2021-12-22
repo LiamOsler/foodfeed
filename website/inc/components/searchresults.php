@@ -15,16 +15,15 @@
                     WHERE r_name LIKE '%{$query}%'";
       $results = $dbconn->query($searchSQL);
 
-      $searchFoodSQL = "SELECT * FROM `menu_items`
-                    WHERE m_name LIKE '%{$query}%'";
+      $searchFoodSQL = "SELECT *,(select r_name from foodfeed_db.restaurants as b WHERE b.r_id = a.r_id) as r_name FROM foodfeed_db.menu_items as a WHERE m_name LIKE '%{$query}%'";
       $resultsFood = $dbconn->query($searchFoodSQL);
       
-      if (mysqli_num_rows($results) == 0 && mysqli_num_rows($resultsFood) == 0) {
+      if ($results && mysqli_num_rows($results) == 0 && $resultsFood && mysqli_num_rows($resultsFood) == 0) {
         echo "<p>This search returned no results.</p>";
       }
       else { 
 
-        if(mysqli_num_rows($results) !=0){?>
+        if($results && mysqli_num_rows($results) !=0){?>
           <p>Restaurants:</p>
 
           <?php
@@ -56,7 +55,7 @@
           }
         }
 
-        if(mysqli_num_rows($resultsFood) !=0){?>
+        if($resultsFood && mysqli_num_rows($resultsFood) !=0){?>
           <p>Food:</p>
         
           <?php
@@ -65,6 +64,7 @@
             $r_id = $currentFoodItem["r_id"];
             $m_name = $currentFoodItem["m_name"];
             $m_category = $currentFoodItem["m_category"];
+            $r_name = $currentFoodItem["r_name"];
             ?>
             <div class = "col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
               <?php echo $m_id;?>
@@ -72,6 +72,7 @@
                 <div class="card-body">
                 <h5 class="card-title"><?php echo $m_name;?></h5>
                 <p class="card-text"><?php echo $m_category;?></p>
+                <p class="card-text"><?php echo $r_name;?></p>
                 </div>
             </div>
             <?php
