@@ -68,7 +68,7 @@
             ?>
             <div class = "col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
               <?php echo $m_id;?>
-                <img class="card-img-top" src="images/chips.png" alt="Card image cap">
+                <img class="card-img-top" style="padding: 25px;" src="images/<?php echo $m_category;?>.png" alt="<?php echo $m_category;?>">
                 <div class="card-body">
                 <h5 class="card-title"><?php echo $m_name;?></h5>
                 <p class="card-text"><?php echo $m_category;?></p>
