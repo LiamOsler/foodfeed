@@ -59,7 +59,7 @@ CREATE TABLE restaurants(
     r_website TEXT,
     r_hour_open INT,
     r_hour_close INT,
-    r_rating DOUBLE,
+    r_rating DOUBLE
     );
 
 CREATE TABLE menu_items(
