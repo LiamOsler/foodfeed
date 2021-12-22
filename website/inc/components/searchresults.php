@@ -1,120 +1,56 @@
-<div class="card-deck">
-    
-  <div class="card">
-    <img class="card-img-top" src="images/hotsauce.png" alt="Card image cap">
-    <div class="card-body">
-    <h5 class="card-title">Hot Sauce</h5>
-        <p class="card-text">$3.99</p>
-        <form action="">
-            <label for="cars">Quantity</label>
-            <select id="cars" name="cars">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            </select>
-            <br>
-            <input type="submit" class="btn btn-success" value = "Add">
-        </form>
-    </div>
-  </div>
 
-  <div class="card">
-    <img class="card-img-top" src="images/mayo.png" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title">Mayo</h5>
-            <p class="card-text">$3.99</p>
-            <form action="">
-              <label for="cars">Quantity</label>
-              <select id="cars" name="cars">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <br>
-              <input type="submit" class="btn btn-success" value = "Add">
-            </form>
-    </div>
-  </div>
+<?php
+  include "../../db/db.php";
+?>
 
-  <div class="card">
-    <img class="card-img-top" src="images/ranch.png" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title">Ranch</h5>
-            <p class="card-text">$2.99</p>
-            <form >
-              <label for="cars">Quantity</label>
-              <select id="cars" name="cars">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <br>
-              <input type="submit" class="btn btn-success" value = "Add">
-            </form>
-    </div>
-  </div>
+<div class="container-fluid">
+<br>
+<p>Results:</p>
+<div class="row">
+  <?php
+    // If the search query string is set
+    if (isset($_GET["search-query"])) {
+      $query = $_GET["search-query"];
 
-</div>
-<div class="card-deck">
-    
-  <div class="card">
-    <img class="card-img-top" src="images/jam.png" alt="Card image cap">
-    <div class="card-body">
-    <h5 class="card-title">Jam</h5>
-        <p class="card-text">$3.99</p>
-        <form action="">
-            <label for="cars">Quantity</label>
-            <select id="cars" name="cars">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            </select>
-            <br>
-            <input type="submit" class="btn btn-success" value = "Add">
-        </form>
-    </div>
-  </div>
+      $searchSQL = "SELECT * FROM `restaurants`
+                    WHERE r_name LIKE '%{$query}%'";
+      $results = $dbconn->query($searchSQL);
+      
+      if (mysqli_num_rows($results) == 0) {
+        echo "<p>This search returned no results.</p>";
+      }
+      else { 
+        while ($current= $results->fetch_assoc()){
+          $r_id = $current["r_id"];
+          $r_name = $current["r_name"];
+          $r_phone = $current["r_phone"];
+          $r_category = $current["r_category"];
+          $r_street = $current["r_street"];
+          $r_city = $current["r_city"];
+          $r_province = $current["r_province"];
+          $r_postal = $current["r_postal"];
+          $r_lat = $current["r_lat"];
+          $r_long = $current["r_long"];
+          $r_website = $current["r_website"];
+          $r_hour_open = $current["r_hour_open"];
+          $r_hour_close = $current["r_hour_close"];
+          $r_rating = $current["r_rating"];
+          ?>
+          <div class = "col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
+            <div class="card">
+            <?php echo $r_id;?>
+              <img class="card-img-top" src="images/hotsauce.png" alt="Card image cap">
+              <div class="card-body">
+              <h5 class="card-title"><?php echo $r_name;?></h5>
+                  <p class="card-text">$3.99</p>
+              </div>
+            </div>
+          </div>
+          <?php
+        }
+      }
+    }
 
-  <div class="card">
-    <img class="card-img-top" src="images/alfredo.png" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title">Alfredo</h5>
-            <p class="card-text">$4.99</p>
-            <form action="">
-              <label for="cars">Quantity</label>
-              <select id="cars" name="cars">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <br>
-              <input type="submit" class="btn btn-success" value = "Add">
-            </form>
-    </div>
+  ?>
   </div>
-
-  <div class="card">
-    <img class="card-img-top" src="images/pesto.png" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title">Pesto</h5>
-            <p class="card-text">$5.25</p>
-            <form >
-              <label for="cars">Quantity</label>
-              <select id="cars" name="cars">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <br>
-              <input type="submit" class="btn btn-success" value = "Add">
-            </form>
-    </div>
-  </div>
-
 </div>

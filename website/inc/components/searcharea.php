@@ -11,7 +11,7 @@ function showResult(str) {
     }
 
   }
-  xmlhttp.open("GET","inc/components/searchresults.php?searchQuery="+str, true);
+  xmlhttp.open("GET","inc/components/searchresults.php?search-query="+str, true);
   xmlhttp.send();
 }
 
