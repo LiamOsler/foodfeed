@@ -21,6 +21,6 @@
 
     <title>FoodFeed</title>
 </head>
-<body>
 
+<body>
 <?php include "inc/components/navbar.php";?>
