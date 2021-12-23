@@ -18,7 +18,6 @@ $(document).ready(function(){
         }});
     });
 
-    $('#search-input').attr('placeholder','Some New Text 1');
 });
 
 function hello(){
@@ -71,5 +70,6 @@ function toggleLoginModal(){
 function toggleRegistrationModal(){
     $('#loginModal').modal('toggle');
 }
+
 
 

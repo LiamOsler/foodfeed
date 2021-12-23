@@ -43,7 +43,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6 py-20 mb-4">
             <div class="card">
                 <div class="card-body">
                     <h1 class="display-2"><?php echo $r_name;?></h1>
@@ -56,7 +56,7 @@
 
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6 py-20 mb-4">
             <div class="card">
                 <div class="card-body">
                     <div id="map"></div>
@@ -103,4 +103,19 @@
 <?php
 }
 ?>
+
+<script>
+
+var lat = document.getElementById("r-lat").innerHTML;
+var long = document.getElementById("r-long").innerHTML;
+
+var map = L.map('map').setView([lat, long], 18);
+L.tileLayer(
+    'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19
+    }).addTo(map);
+  
+  // add a marker in the given location
+  L.marker([lat, long]).addTo(map);
+</script>
 

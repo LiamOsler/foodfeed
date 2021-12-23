@@ -24,12 +24,22 @@
   object-fit: cover;
 }
 
+.jumbotron{
+  margin-bottom: 0;
 
-.jumbotron-search{
-  min-height: 100vh;
+}
+
+body{
+  background-image:  linear-gradient(135deg, #ffbcbc 25%, transparent 25%), linear-gradient(225deg, #ffbcbc 25%, transparent 25%), linear-gradient(45deg, #ffbcbc 25%, transparent 25%), linear-gradient(315deg, #ffbcbc 25%, #f7e7e6 25%);
+  background-position:  40px 0, 40px 0, 0 0, 0 0;
+  background-size: 40px 40px;
+  background-repeat: repeat;
 }
 
 
+.jumbotron{
+  background-color: rgba(0,0,0,0);
+}
 .card-footer{
   margin-top: auto;
 }
@@ -49,4 +59,8 @@
 .coordinates{
   visibility: hidden;
   display: none;
+}
+
+#map {
+  height: 400px;
 }

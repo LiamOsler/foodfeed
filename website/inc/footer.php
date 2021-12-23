@@ -1,3 +1,5 @@
+
+<?php include "inc/components/loginmodal.php";?>
 </body>
 </html>
 

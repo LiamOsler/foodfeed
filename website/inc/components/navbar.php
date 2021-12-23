@@ -22,7 +22,6 @@
 			<?php
 				}
 				else{
-					include "inc/components/loginmodal.php";
 			?>
 				<li class="nav-item nav-link dropdown">
 					<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
