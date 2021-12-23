@@ -1,30 +1,29 @@
-r_id,r_name,r_phone,r_category,r_street,r_city,r_province,r_postal,r_lat,r_long,r_website,r_hour_open,r_hour_close,r_rating
-1,Darrell's restaurant,19024922344,American,5576 Fenwick St,Halifax,NS,B3H 1P8,44.64365092,-63.56959629,https://darrellsrestaurants.com/,1100,2100,4.39
-2,Smoke's Poutienerie,19024226762,Canadian,5236 Blowers St,Halifax,NS,B3J 1J7,44.64184942,-63.57120584,https://smokespoutinerie.com/,1100,1900,4.42
-3,aFrite Restaurant,19024073060,Contemporary,1360 Lower Water St,Halifax,NS,B3J 3X2,44.64367418,-63.56952117,http://www.afrite.ca/,1700,2200,4.18
-4,La Frasca Cibi & Vini,19024222866,Italian,5650 Spring Garden Rd,Halifax,NS,B3J 3M7,44.64292678,-63.57792554,http://lafrasca.ca/,1600,2200,3.02
-5,Tomavinos Ristorante,19024259111,Italian,1113 Marginal Rd,Halifax,NS,B3H 4P7,44.63944264,-63.56610412,https://tomavinos.ca/,1100,2000,3.52
-6,Bicycle Thief,19024257993,Italian,1475 Lower Water St,Halifax,NS,B3J 3Z2,44.64363019,-63.56811369,http://bicyclethief.ca/,800,2030,3.92
-7,Split Crow,19024224366,Pub,1855 Granville St,Halifax,NS,B3J 3L7,44.64932985,-63.57418159,http://www.splitcrow.com/beverages/,1130,2300,4.54
-8,Henry House,19024235660,Pub,1222 Barrington St,Halifax,NS,B3J 1Y6,44.64057223,-63.57115026,http://henryhouse.ca/,800,2030,3.32
-9,Dooly's,19024552538,Pool Hall,3129 Kempt Rd,Halifax,NS,B3K 5N6,44.65996057,-63.60386065,http://www.doolys.ca/,1100,2330,4.77
-10,Sea Smoke,19024061051,Seafood,1477 Lower Water St,Halifax,NS,B3J 3Z2,44.6440782,-63.56895208,http://www.seasmokehalifax.com/,1100,2330,4.11
-11,Your Father's Moustache,19024236766,Pub,5686 Spring Garden Rd,Halifax,NS,B3J 1H5,44.64270459,-63.57899156,http://yourfathersmoustache.ca/,1100,2330,4.98
-12,Edna,19024292550,Bistro,2053 Gottingen St,Halifax,NS,B3K 3B2,44.65141351,-63.58235327,http://ednarestaurant.com/,1100,2330,4.96
-13,2 Doors Down,19024224224,Pub,1533 Barrington St,Halifax,NS,B3J 1Z6,44.64495964,-63.57287235,http://www.go2doorsdown.com/,1100,2330,3.90
-14,Gio,19024251987,Fine Dining,"1725 Market St, Halifax",Halifax,NS,B3J 3N9,44.64708414,-63.57606262,http://giohalifax.com/,1100,2330,3.56
-15,Black sheep ,19024296491,American,1496 Lower St,Halifax,NS,B3J 1R9,44.64429129,-63.57015247,http://blacksheephalifax.com/,1000,2200,3.63
-16,The  Spice Hub,19024352227,Indian,1015 Main St,Halifax,NS,B2W 3V4,44.70182741,-63.47835319,https://spicehubns.ca/welcome/,1100,2330,4.71
-17,Chop Steakhouse & bar,19029327540,Pub,1684 Grafton St,Halifax,NS,B3J 2C4,44.64677661,-63.57545814,https://chop.ca/restaurant-locations/halifax-nova-scotia/chop-halifax,700,2100,4.98
-18,Julep Kitchen and Cocktails,19028003155,Lebanese,1684 Barrington St,Halifax,NS,B3J 3K4,44.64724631,-63.5741555,http://www.julepbarrington.com/,1130,2030,4.65
-19,Stones Throw,19024211700,Canadian,1919 Upper Water St,Halifax,NS,B3J 3N2,44.65103324,-63.57300289,https://www.facebook.com/STONESTHROWpatio/,1200,2000,4.66
-20,Westcliff,19024548184,Thai,3089 Oxford St,Halifax,NS,B3L 2W8,44.65492569,-63.61015207,https://www.facebook.com/westcliffdiner/?hc_ref=SEARCH&fref=nf,1200,1800,4.83
-21,Highwayman,19024075260,Spanish,1673 Barrington St,Halifax,NS,B3J 1Z9,44.64706138,-63.57378566,http://www.highwaymanhfx.com/,900,1600,3.68
-22,The Foggy Goggle,19024441414,Chinese,2057 Gottigen St,Halifax,NS,B3K 3B2,44.65155027,-63.58247893,http://thefoggygoggle.ca/,1200,2400,3.91
-23,Antojo's,13435672200,Mexican,1667 Argyle St,Halifax,NS,B3J 2B5,44.64686607,-63.5740984,http://www.antojo.ca/,1100,1900,3.21
-24,The Auction House,19029891177,Classic ,1726 Argyle St,Halifax,NS,B3J 2B3,44.64787847,-63.57531573,http://www.auctionhousehalifax.com/food/appetizers-shareables/,1600,2200,3.04
-25,The Feasts,19023832242,Thai,6293 Quinpool Rd,Halifax,NS,B3L 1A4,44.64538331,-63.5984385,https://thefeastsrestaurant.com/,1030,2100,4.68
-26,East Side Mario,19024501311,Italian,186 Chainlake Dr, Halifax,NS,B3S 1CS,46.23413846,-93.47263358,https://www.eastsidemarios.com/,900,1800,3.82
-27,Noodle Nami,19024060203,Chinese,6450 Quinpool Rd,Halifax,NS,B3L 1A8,44.64915612,-63.6017489,http://www.noodlenami.ca/,900,1800,4.15
-28,Red Chillies Flavours of India,19028327788,Indian,936 Bedford Hwy Unit,Halifax,NS,B4A 3P1,44.71486586,-63.68304958,https://redchilliesflavoursofindia.com/,1800,2400,3.24
-,,,,,,,,,,,,,
+r_id,r_name,r_phone,r_category,r_street,r_city,r_province,r_postal,r_lat,r_long,r_website,r_hour_open,r_hour_close,r_rating,r_img
+1,Darrell's Restaurant,19024922344,Diner,5576 Fenwick St,Halifax,NS,B3H 1P8,44.64365092,-63.56959629,https://darrellsrestaurants.com/,1100,2100,4.39,darrel.jpg
+2,Smoke's Poutienerie,19024226762,Canadian,5236 Blowers St,Halifax,NS,B3J 1J7,44.64184942,-63.57120584,https://smokespoutinerie.com/,1100,1900,4.42,smokes.jpg
+3,aFrite Restaurant,19024073060,Contemporary,1360 Lower Water St,Halifax,NS,B3J 3X2,44.64367418,-63.56952117,http://www.afrite.ca/,1700,2200,4.18,af.jpg
+4,La Frasca Cibi & Vini,19024222866,Italian,5650 Spring Garden Rd,Halifax,NS,B3J 3M7,44.64292678,-63.57792554,http://lafrasca.ca/,1600,2200,3.02,lafras.jpg
+5,Tomavinos Ristorante,19024259111,Italian,1113 Marginal Rd,Halifax,NS,B3H 4P7,44.63944264,-63.56610412,https://tomavinos.ca/,1100,2000,3.52,tomavi.jpg
+6,Bicycle Thief,19024257993,Italian,1475 Lower Water St,Halifax,NS,B3J 3Z2,44.64363019,-63.56811369,http://bicyclethief.ca/,800,2030,3.92,bicycl.jpg
+7,Split Crow,19024224366,Pub,1855 Granville St,Halifax,NS,B3J 3L7,44.64932985,-63.57418159,http://www.splitcrow.com/beverages/,1130,2300,4.54,sp.jpg
+8,Henry House,19024235660,Pub,1222 Barrington St,Halifax,NS,B3J 1Y6,44.64057223,-63.57115026,http://henryhouse.ca/,800,2030,3.32,henryh.jpg
+9,Dooly's,19024552538,Pool Hall,3129 Kempt Rd,Halifax,NS,B3K 5N6,44.65996057,-63.60386065,http://www.doolys.ca/,1100,2330,4.77,do.jpg
+10,Sea Smoke,19024061051,Seafood,1477 Lower Water St,Halifax,NS,B3J 3Z2,44.6440782,-63.56895208,http://www.seasmokehalifax.com/,1100,2330,4.11,se.jpg
+11,Your Father's Moustache,19024236766,Pub,5686 Spring Garden Rd,Halifax,NS,B3J 1H5,44.64270459,-63.57899156,http://yourfathersmoustache.ca/,1100,2330,4.98,yourfa.jpg
+12,Edna,19024292550,Bistro,2053 Gottingen St,Halifax,NS,B3K 3B2,44.65141351,-63.58235327,http://ednarestaurant.com/,1100,2330,4.96,ednare.jpg
+13,2 Doors Down,19024224224,Pub,1533 Barrington St,Halifax,NS,B3J 1Z6,44.64495964,-63.57287235,http://www.go2doorsdown.com/,1100,2330,3.9,go.jpg
+14,Gio,19024251987,Fine Dining,"1725 Market St, Halifax",Halifax,NS,B3J 3N9,44.64708414,-63.57606262,http://giohalifax.com/,1100,2330,3.56,giohal.jpg
+15,Black sheep ,19024296491,American,1496 Lower St,Halifax,NS,B3J 1R9,44.64429129,-63.57015247,http://blacksheephalifax.com/,1000,2200,3.63,blacks.jpg
+16,The  Spice Hub,19024352227,Indian,1015 Main St,Halifax,NS,B2W 3V4,44.70182741,-63.47835319,https://spicehubns.ca/welcome/,1100,2330,4.71,spicehub.jpg
+17,Chop Steakhouse & bar,19029327540,Pub,1684 Grafton St,Halifax,NS,B3J 2C4,44.64677661,-63.57545814,https://chop.ca/restaurant-locations/halifax-nova-scotia/chop-halifax,700,2100,4.98,chop.jpg
+18,Julep Kitchen and Cocktails,19028003155,Lebanese,1684 Barrington St,Halifax,NS,B3J 3K4,44.64724631,-63.5741555,http://www.julepbarrington.com/,1130,2030,4.65,ju.jpg
+19,Stones Throw,19024211700,Canadian,1919 Upper Water St,Halifax,NS,B3J 3N2,44.65103324,-63.57300289,https://www.facebook.com/STONESTHROWpatio/,1200,2000,4.66,st.jpg
+20,Westcliff,19024548184,Diner,3089 Oxford St,Halifax,NS,B3L 2W8,44.65492569,-63.61015207,https://www.facebook.com/westcliffdiner/?hc_ref=SEARCH&fref=nf,1200,1800,4.83,wc.jpg
+21,Highwayman,19024075260,Spanish,1673 Barrington St,Halifax,NS,B3J 1Z9,44.64706138,-63.57378566,http://www.highwaymanhfx.com/,900,1600,3.68,hi.jpg
+22,The Foggy Goggle,19024441414,Chinese,2057 Gottigen St,Halifax,NS,B3K 3B2,44.65155027,-63.58247893,http://thefoggygoggle.ca/,1200,2400,3.91,thefog.jpg
+23,Antojo's,13435672200,Mexican,1667 Argyle St,Halifax,NS,B3J 2B5,44.64686607,-63.5740984,http://www.antojo.ca/,1100,1900,3.21,an.jpg
+24,The Auction House,19029891177,Classic ,1726 Argyle St,Halifax,NS,B3J 2B3,44.64787847,-63.57531573,http://www.auctionhousehalifax.com/food/appetizers-shareables/,1600,2200,3.04,au.jpg
+25,The Feasts,19023832242,Thai,6293 Quinpool Rd,Halifax,NS,B3L 1A4,44.64538331,-63.5984385,https://thefeastsrestaurant.com/,1030,2100,4.68,thefea.jpg
+26,East Side Mario,19024501311,Italian,186 Chainlake Dr, Halifax,NS,B3S 1CS,46.23413846,-93.47263358,https://www.eastsidemarios.com/,900,1800,3.82,ea.jpg
+27,Noodle Nami,19024060203,Chinese,6450 Quinpool Rd,Halifax,NS,B3L 1A8,44.64915612,-63.6017489,http://www.noodlenami.ca/,900,1800,4.15,no.jpg
+28,Red Chillies Flavours of India,19028327788,Indian,936 Bedford Hwy Unit,Halifax,NS,B4A 3P1,44.71486586,-63.68304958,https://redchilliesflavoursofindia.com/,1800,2400,3.24,redchi.jpg
