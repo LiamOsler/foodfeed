@@ -36,18 +36,20 @@
 
 <div class = "coordinates" id="r-lat"><?php echo $r_lat;?></div>
 <div class = "coordinates" id="r-long"><?php echo $r_long;?></div>
-
-<div class="jumbotron">
-    <a class="btn btn-outline-secondary btn-lg" href="#" role="button" onclick = "searchReturn('<?php echo $searchString;?>')"><i class="bi bi-arrow-left"></i> Back to Search</a>
-</div>
-
 <div class="container">
+    <div class="row">   
+        <div class="col-12">
+        <a class="btn btn-light btn-lg" href="#" role="button" onclick = "searchReturn('<?php echo $searchString;?>')"><i class="bi bi-arrow-left"></i> Back to Search</a>
+
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-6 col-md-6 py-20 mb-4">
-            <div class="card">
+            <div class="card h-100">
                 <div class="card-body">
                     <h1 class="display-2"><?php echo $r_name;?></h1>
                     <p class="display-6"><?php echo $r_street;?>, <?php echo $r_city?>, <?php echo $r_province?></p>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." </p>
                 </div>
                 <div class ="card-footer">
                 <a type="button" class="btn btn-outline-primary" href = "<?php echo $r_website?>"><i class="bi-globe"></i> Website</a>
@@ -57,49 +59,56 @@
             </div>
         </div>
         <div class="col-lg-6 col-md-6 py-20 mb-4">
-            <div class="card">
+            <div class="card h-100">
                 <div class="card-body">
                     <div id="map"></div>
                 </div>
             </div>
         </div>
+
+        <div class="col-12 py-20">
+            <div class="card h-100">
+                <div class="card-body">
+                <h1 class ="display-4">Menu</h1>
+
+                    <div class="container container-full">
+                        <div class="row"> 
+                    <?php
+                        $query = "  SELECT * FROM `menu_items`
+                                    WHERE `r_id` = $r_id
+                                    ORDER BY `m_category`";
+
+                        $results = $dbconn->query($query);
+
+                        if (mysqli_num_rows($results) == 0) {
+                            echo "<p>Restaurant Not Found</p>";
+                        }
+                        else{
+                            while ($current= $results->fetch_assoc()){
+                                $m_id = $current["m_id"];
+                                $m_name = $current["m_name"];
+                                $m_category = $current["m_category"];
+                                ?>
+                                    <div class = "col-sm-6 col-md-4 col-lg-3 col-xl-2 py-20 mb-4">
+                                        <div class="card h-100 text-center">
+                                            <img class="card-img-top" src="images/hotsauce.png" alt="Card image cap">
+                                            <div class="card-body card-search-results">
+                                            <h5 class="card-title"><?php echo $m_name;?></h5>
+                                            <p class="card-text"><?php echo $m_category;?></p>
+                                            </div>  
+                                            <div class="card-footer mt-auto">
+                                            <a id = "#test" type="button" class="btn btn-success">Add to Cart</a>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+        </div>
     </div>
-
-    <div class="row">   
-    <?php
-        $query = "  SELECT * FROM `menu_items`
-                    WHERE `r_id` = $r_id
-                    ORDER BY `m_category`";
-
-        $results = $dbconn->query($query);
-
-        if (mysqli_num_rows($results) == 0) {
-            echo "<p>Restaurant Not Found</p>";
-        }
-        else{
-            while ($current= $results->fetch_assoc()){
-                $m_id = $current["m_id"];
-                $m_name = $current["m_name"];
-                $m_category = $current["m_category"];
-                ?>
-                    <div class = "col-sm-6 col-md-4 col-lg-3 col-xl-2 py-20 mb-4">
-                        <div class="card h-100 text-center">
-                            <img class="card-img-top" src="images/hotsauce.png" alt="Card image cap">
-                            <div class="card-body card-search-results">
-                            <h5 class="card-title"><?php echo $m_name;?></h5>
-                            <p class="card-text"><?php echo $m_category;?></p>
-                            </div>  
-                            <div class="card-footer mt-auto">
-                            <a id = "#test" type="button" class="btn btn-success">Add to Cart</a>
-                            </div>
-                        </div>
-                    </div>  
-                <?php
-            }
-        }
-        ?>
-    </div>
-</div>
 <?php
 }
 ?>

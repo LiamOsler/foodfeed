@@ -62,5 +62,15 @@ body{
 }
 
 #map {
-  height: 400px;
+  height: 100%;
+}
+
+.card-deck{
+  
+}
+
+.container-full{
+  padding-left: 0;
+  padding-right: 0;
+
 }
