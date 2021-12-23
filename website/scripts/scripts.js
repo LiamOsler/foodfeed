@@ -58,7 +58,9 @@ function searchReturn(searchString){
     }});
 
     showResult(searchString);
-
-
+}
+//Functions for calling modals (should be refactored):
+function openLoginModal(){
+    $('#loginModal').modal('toggle');
 }
 

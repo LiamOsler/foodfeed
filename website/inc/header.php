@@ -1,4 +1,10 @@
-<?php include "db/db.php";?>
+<?php
+session_name('foodfeed');
+session_start();
+include "db/db.php";
+include "db/functions.php"; 
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">

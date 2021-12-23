@@ -41,3 +41,7 @@
 .nav-item{
   text-align: right;
 }
+
+.row{
+  padding-top: 1em;
+}
