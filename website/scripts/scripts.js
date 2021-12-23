@@ -17,6 +17,8 @@ $(document).ready(function(){
             $("#page-content").html(result);
         }});
     });
+
+    $('#search-input').attr('placeholder','Some New Text 1');
 });
 
 function hello(){
@@ -25,8 +27,8 @@ function hello(){
     }});
 }
 
-function viewRestaurant(id){
-    var restaurantURL = "pages/restaurant.php?r_id=" + id;
+function viewRestaurant(id, searchString){
+    var restaurantURL = "pages/restaurant.php?r_id=" + id +"&search-query=" +searchString;
 
     $.ajax({url: restaurantURL, success: function(result){
         $("#page-content").html(result);
@@ -48,4 +50,15 @@ function showResult(str) {
     xmlhttp.open("GET","inc/components/searchresults.php?search-query="+str, true);
     xmlhttp.send();
   }
-  
+
+function searchReturn(searchString){
+
+    $.ajax({url: "pages/landingpage.php", success: function(result){
+        $("#page-content").html(result);
+    }});
+
+    showResult(searchString);
+
+
+}
+
