@@ -33,6 +33,8 @@ function viewRestaurant(id, searchString){
     $.ajax({url: restaurantURL, success: function(result){
         $("#page-content").html(result);
     }});
+
+    $('html,body').scrollTop(0);
 }
 
 function showResult(str) {
@@ -59,8 +61,15 @@ function searchReturn(searchString){
 
     showResult(searchString);
 }
+
 //Functions for calling modals (should be refactored):
-function openLoginModal(){
+function toggleLoginModal(){
     $('#loginModal').modal('toggle');
 }
+
+//Functions for calling modals (should be refactored):
+function toggleRegistrationModal(){
+    $('#loginModal').modal('toggle');
+}
+
 

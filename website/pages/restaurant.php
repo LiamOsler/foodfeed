@@ -34,6 +34,9 @@
 
 ?>
 
+<div class = "coordinates" id="r-lat"><?php echo $r_lat;?></div>
+<div class = "coordinates" id="r-long"><?php echo $r_long;?></div>
+
 <div class="jumbotron">
     <a class="btn btn-outline-secondary btn-lg" href="#" role="button" onclick = "searchReturn('<?php echo $searchString;?>')"><i class="bi bi-arrow-left"></i> Back to Search</a>
 </div>
@@ -56,9 +59,7 @@
         <div class="col-lg-6">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div id="map"></div>
                 </div>
             </div>
         </div>

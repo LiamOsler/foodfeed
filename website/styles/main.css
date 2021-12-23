@@ -45,3 +45,8 @@
 .row{
   padding-top: 1em;
 }
+
+.coordinates{
+  visibility: hidden;
+  display: none;
+}
