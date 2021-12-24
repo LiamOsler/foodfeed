@@ -9,14 +9,6 @@ include "db/functions.php";
 //Sanitize the username and password input:
 $usernameInput = sanitizeData($_POST["username"]);
 $passwordInput = sanitizeData($_POST["password"]);
-
-echo("usernameInput: ");
-echo($usernameInput  );
-echo("<br>");
-echo("passwordInput: ");
-echo($passwordInput );
-echo("<br>");
-
 $passwordInput = md5($passwordInput);
 //Query the users table for the username that was inputted 
 $querySQL = "   SELECT `u_id`, `u_username`, `u_private_id` 
@@ -39,15 +31,6 @@ else{
         $username = $current["u_username"];
         $privateID = $current["u_private_id"];
 
-        echo("userID: ");
-        echo($userID );
-        echo("<br>");
-        echo("username: ");
-        echo($username );
-        echo("<br>");
-        echo("privateID: ");
-        echo($privateID );
-        echo("<br>");
         //Get the user's salt and peppers for password spicing:
         $querySQL = "   SELECT `u_private_id`, `u_salt`, `u_pepper` 
                         FROM `user_salt` 
@@ -59,31 +42,13 @@ else{
             $userSalt = $current["u_salt"];
             $userPepper = $current["u_pepper"] ;
 
-            echo("Salt: ");
-            echo( $userSalt); 
-            echo("<br>");
-            echo("Pepper: ");
-            echo( $userPepper);
-            echo("<br>");
-            echo("Hashed Password Input: ");
-            echo($passwordInput);
-            echo("<br>");
-
             //Conatenate the salt, password input and the pepper together
             $saltAndPepperPasswordInput = $userSalt . $passwordInput . $userPepper;
-
-            echo("Salt + Hash + Pepper: ");
-            echo($saltAndPepperPasswordInput);
-            echo("<br>");
-
 
             //Get the MD5 checksum of $saltAndPepperPasswordInput and set it to a variable:
             $saltAndPepperPasswordInputChecksum = md5($saltAndPepperPasswordInput);
             //Get the user's hashed password (with salt and pepper) from the database:
 
-            echo("Salt + Hash + Pepper Checksum:");
-            echo($saltAndPepperPasswordInputChecksum);
-            
             $querySQL = "   SELECT `u_private_id`, `u_hash` from `user_hashes`
                             WHERE `u_private_id` = '{$privateID}'";
             $result = $dbconn->query($querySQL);
