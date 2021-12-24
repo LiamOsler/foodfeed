@@ -36,7 +36,7 @@
 
 <div class = "coordinates" id="r-lat"><?php echo $r_lat;?></div>
 <div class = "coordinates" id="r-long"><?php echo $r_long;?></div>
-<div class="container">
+<div class="container-xl">
     <div class="row">   
         <div class="col-12">
         <a class="btn btn-light btn-lg" href="#" role="button" onclick = "searchReturn('<?php echo $searchString;?>')"><i class="bi bi-arrow-left"></i> Back to Search</a>
