@@ -1,0 +1,329 @@
+m_id,r_id,m_name,m_category
+1,1,Cheeseburger Combo,Burgers
+2,1,Bacon Poutine,Poutines
+3,1,Donair Poutine,Poutines
+4,1,Steak Poutine,Poutines
+5,1,Pepsi,Drinks
+6,1,Fanta,Drinks
+7,1,Sprite,Drinks
+8,1,Big Kahuna Burger,Burgers
+9,1,Mozza Sticks,Appetizers
+10,1,Seafood Platter,Appetizers
+11,1,Caesar Pita,Pitas
+12,1,Chocolate Milkshake,Milkshakes
+13,1,Vanilla Milkshake,Milkshakes
+14,1,Caesar Salad,Salads
+15,1,Cob Salad,Salads
+16,1,Strawberry Milkshake,Milkshakes
+17,1,Angus Burger,Burgers
+18,1,Peanut Butter Burger,Burgers
+19,2,Bacon Poutine,Poutines
+20,2,Donair Poutine,Poutines
+21,2,Steak Poutine,Poutines
+22,2,Newfie Poutine,Poutines
+23,2,Butter Chicken Poutine,Poutines
+24,2,Pepsi,Drinks
+25,2,Fanta,Drinks
+26,2,Sprite,Drinks
+27,2,Ice Tea,Drinks
+28,3,Kish Soup,Soups
+29,3,Calamari,Seafood
+30,3,Oyster Ceviche,Seafood
+31,3,Wild Mushroom Gnocchi,Mains
+32,3,Cherry Chicken,Mains
+33,3,Banana Steamed Halibut,Mains
+34,3,Braised Lamb,Mains
+35,3,Roasted Beat Salad,Salads
+36,3,Meze Board,Appetizers
+37,3,Fattoush Salad,Salads
+38,4,Arancini,Appetizers
+39,4,Calamari,Appetizers
+40,4,Italian Onion Tart,Appetizers
+41,4,Pedoci,Appetizers
+42,4,Polenta Romano,Appetizers
+43,4,Gamberi in Padella,Appetizers
+44,4,Zuppa di Pastinaca,Appetizers
+45,4,Linguine,Pastas
+46,4,Rigatoni Carbonara,Pastas
+47,4,Tagliatelle con Fughi di Bosco,Pastas
+48,4,Gnocchi Amatriciana,Pastas
+49,4,Fettuccine,Pastas
+50,4,Cavatelli,Pastas
+51,4,Ravioli,Pastas
+52,4,Margherita,Pizza
+53,4,Prosciutto,Pizza
+54,4,Salsiccia,Pizza
+55,4,Funghi,Pizza
+56,4,Halibut,Mains
+57,4,Atlantic Salmon,Mains
+58,4,Brome Lake Duck,Mains
+59,5,Pizza Con Carne,Pizza
+60,5,Eos,Pizza
+61,5,New York Pizza,Pizza
+62,5,Canadian Pizza,Pizza
+63,5,Hawaiian Pizza,Pizza
+64,5,Tomavinos Combo,Pizza
+65,5,Palermo Pizza,Pizza
+66,5,Garlic Fingers,Pizza
+67,5,Lobster Roll,Seafood
+68,5,Caesar Salad,Salads
+69,5,Greek Salad,Salads
+70,5,Turtles Ice Cream Sandwich,Desserts
+71,6,Oyster Platter,Appetizers
+72,6,Antipasti Board,Appetizers
+73,6,Tenderloin Tartare,Appetizers
+74,6,Calamari,Appetizers
+75,6,Tomato Sauteed Mussels,Appetizers
+76,6,Jumbo Shrimp,Appetizers
+77,6,Yellowfin Tuna Tartare,Appetizers
+78,6,Seared Scallops,Appetizers
+79,6,Insalata Panzanella,Appetizers
+80,6,Linguine,Mains
+81,6,Lasagna,Mains
+82,6,Red Ravioli,Mains
+83,6,Spaghettini ai Frutti di Mare,Mains
+84,6,Linguine Carbonara,Mains
+85,6,Lobster Risotto,Mains
+86,6,Seafood Stew,Mains
+87,6,Honey-crusted Salmon,Mains
+88,6,Halibut,Mains
+89,6,Tagliata,Mains
+90,6,Chicken Breast,Mains
+91,6,Beef Short Rib,Mains
+92,7,Cheeseburger Combo,Burgers
+93,7,Bacon Poutine,Poutines
+94,7,Donair Poutine,Poutines
+95,7,Steak Poutine,Poutines
+96,7,Pepsi,Drinks
+97,7,Fanta,Drinks
+98,7,Sprite,Drinks
+99,7,Big Kahuna Burger,Burgers
+100,7,Mozza Sticks,Appetizers
+101,7,Deep Fried Pepperoni,Appetizers
+102,7,Onion Rings,Appetizers
+103,7,Chicken Fingers,Appetizers
+104,7,Fried Zucchini Sticks,Appetizers
+105,7,Nachos,Appetizers
+106,7,Spinach Dip Platter,Appetizers
+107,7,Grilled Cheese Combo,Mains
+108,7,Maritime Classic Pizza,Pizza
+109,7,Fried Chicken Sandwich,Mains
+110,7,Tavern Steak and Fries,Mains
+111,7,BLT Sandwich,Mains
+112,8,Caesar Salad,Salads
+113,8,Pear and Goat Cheese Salad,Salads
+114,8,Beetroot Salad,Salads
+115,8,Seafood Chowder,Soups
+116,8,Salt Cod Fish Cakes,Seafood
+117,8,Pan Fried Haddock,Seafood
+118,8,Nachos,Appetizers
+119,8,Lobster Dip,Appetizers
+120,8,Artichoke Dip,Appetizers
+121,8,Poutine,Appetizers
+122,8,Beer Batter Fish and Chips,Mains
+123,8,Chicken Curry,Mains
+124,8,Shepherd's Pie,Mains
+125,8,Bangers and Mash,Mains
+126,8,Cornish Pastie,Mains
+127,8,Steak and Mushroom Pie,Mains
+128,8,Steak and Kidney Pie,Mains
+129,8,Chicken and Leek Pie,Mains
+130,8,Supreme Burger,Burgers
+131,8,Ultimate Burger,Burgers
+132,8,Black Bean Burger,Burgers
+133,8,Lamb Burger,Burgers
+134,8,Smoked Salmon Club Sandwich,Sandwiches
+135,8,Rueben Sandwich,Sandwiches
+136,9,Disco Fries,Appetizers
+137,9,Onion Rings,Appetizers
+138,10,Sushi,Sushi
+139,10,Oysters ,Oyster
+140,10,Tuna Crispy Rice,Rice
+141,10,Mussels,Snacks
+142,10,Sea smoke tataki,Soups
+143,10,Jalapeno Hamachi,Rolls
+144,10,Steak and Frites,Snacks
+145,10,Sushi Combo,Sushi
+146,11,Great Nachos,Starter
+147,11,Calamari,Starter
+148,11,Potato Skins,Starter
+149,11,Pub Clun,Sandwitch
+150,11,Thai Chicken,Sandwitch
+151,11,Lobster Roll,Sandwitch
+152,11,Chicken Parmesan,Pasta
+153,11,PAsta Primavera,Pasta
+154,12,Blackened chicken salad,Salads
+155,12,Lobster Mac and Cheese,Lobster
+156,12,Pad Thai,Thai
+157,12,Chicken Fingers,Chicken
+158,12,Caramel cheesecake,Cheesecake
+159,12,Pork ribs,Pork
+160,12,Steak,Steak
+161,12,Coconut creampie,Dessert
+162,12,Oreo cookie icecream,Icecream
+163,12,Mushroom,Mushroom
+164,12,Moustache Burger,Burgers
+165,13,The Hotpot,Appetizzer
+166,13,Brandade Fritters,Appetizzer
+167,13,Mushroom Toasts,Appetizzer
+168,13,Brussels au Gretin,Appetizzer
+169,13,Sticky Toffin Pudding,Dessert
+170,13,Cheesecake,Dessert
+171,13,Cheese Burger,Burgers
+172,13,Fish n chips ,Bowl
+173,13,The Better Bowl,Bowl
+174,13,The Smokehouse Buger,Burgers
+175,13,Kale caeser Salad,Salads
+176,13,Roasted Sweet Potatoes,Salads
+177,13,Buttermilk Biscuits,Appetizzer
+178,14,Classic Coffee,Coffee
+179,14,coldbrew,Coffee
+180,14,Iced Double Double,Coffee
+181,14,Four Cheese Bagel ,Bagel
+182,14,Jalapeno Bagel,Bagel
+183,14,Crispy Crossaints,Crossaints
+184,14,Herbs and cheese,Cheese
+185,14,Mocha,Coffee
+186,15,wonton Soup,Soup
+187,15,Sea food Chowder,Salad
+188,15,Brussels Salad,Salad
+189,15,Oysters,oyster
+190,15,Home-smoked Bacon,Bacon
+191,15,Pickled Jalapeno,Snacks
+192,15,Eggs Benny,Egg
+193,15,Fish Cakes,Fish
+194,16,Butter Naan,Bread
+195,16,Paneer Lababdar,Curry
+196,16,Manchurain,snacks
+197,16,Butter chicken,Chicken
+198,16,Chilli Paneer,Cheese
+199,16,Lassi,Milk
+200,16,Mango Lassi,Lassi
+201,16,Angaara,Curry
+202,17,Furios Fries,Fries
+203,17,Stuffed mushrooms,Mushroom
+204,17,Chicken Wings,Chicken
+205,17,Vegetable Tempura,Vegetable
+206,17,Steak Bites ,Steak
+207,17,Crack Bites,Steak
+208,17,Chili Garlic Shrimp,Shrimp
+209,17,Lobster,Lobster
+210,18,Bacon Salad,Salad
+211,18,Duck Confit,Duck
+212,18,Four Cheese Gnocchi,Gnochhi
+213,18,Roasted Lamb,Lamb
+214,18, Eggplant Parmiggano,Eggplant
+215,18,Caramel Cheesecake,Cheesecake
+216,18,Beef Tartare,Salad
+217,18,CauliBites,Snacks
+218,19,Signature Cocktail,Cocktail
+219,19,Mojito,Cocktail
+220,19,classic Beer,Beer
+221,19,3 Lady vodka,Liquor
+222,19,Canned Beer,Beer
+223,19,Proch Pizza,Pizza
+224,19,Veggie Pizza,Pizza
+225,20,Western Fries,Fries
+226,20,Egg Salad,Salad
+227,20,Hot chicken and Fries,Snacks
+228,20,Cole Slaw,Sandwich
+229,20,Hamburger Fries,Snacks
+230,20,Nachos,Nachos
+231,20,Mexican Beans,Beans
+232,20,Potato Skins,Snacks
+233,21,Oysters with caviar,Oyster
+234,21,Mojama,Snacks
+235,21,Scallop Crudo,Amonds
+236,21,Seafood Tower,Seafood
+237,21,Albacore Tuna,Fish
+238,21,Pork skewers,Pork
+239,21,Beef Tartare,Beef
+240,21,Croquetas,Snacks
+241,22,Potchos,Snacks
+242,22,Wings,Chicken
+243,22,Crab Cakes,Crab
+244,22,Seafood chambers,seafood
+245,22,Dip Trio,Snacks
+246,22,Thai Coconut Bowl,Thai
+247,22,Bulgogi Bowl,Snacks
+248,22,Mexican chilli ,Mexican
+249,22,Potchos,Appetizers
+250,22,Wings,Appetizers
+251,22,Crab Cakes,Appetizers
+252,22,Cauliflower Bites,Appetizers
+253,22,Dip Trio,Appetizers
+254,22,Thai Coconut Bowl,Salad
+255,22,Summer Tofu Bowl,Salad
+256,22,Bulgogi Bowl,Salad
+257,22,Mexican Chilli,Salad
+258,22,Umami Burger,Burger
+259,22,Portobelo Miso Burger,Burger
+260,22,Classic Burger,Burger
+261,23,Chips + Salasa Trio,Snacks
+262,23,Mexican Street Corn,Snacks
+263,23,Sopa De Lima,Snacks
+264,23,Beed Taquitoes,Snacks
+265,23,Cviches,Snacks
+266,23,Baja Fish,Tacos
+267,23,Pork Belly,Tacos
+268,23,Beef Tounge,Tacos
+269,23,Al Pastor ,Tacos
+270,23,Roasted Mushrooms,Tacos
+271,23,Chicken Tinga,Tacos
+272,24,Green Thai Curry,Curry
+273,24,Stack It High,Burger
+274,24,True North Burger,Burger
+275,24,Crispy Fresh Buger,Burger
+276,24,Vegeroni Burger,Burger
+277,24,Warm Potato Salad,Salad
+278,24,House Salad,Salad
+279,24,Poke Bowl,Salad
+280,24,Dukkah Salad,Salad
+281,24,Calamari,Appetizers
+282,24,Baked Brie,Appetizers
+283,24,Cool Ranch Ribs,Appetizers
+284,24,Seafood Chowders,Appetizers
+285,24,Haddoke Bake,British
+286,24,Shepherds Pie,British
+287,24,Beef Dip,British
+288,25,Veg Chowmein,Chowmein
+289,25,Indo-Chinese Noodle,Chowmein
+290,25,Meat Chowmein,Chowmein
+291,25,Originally Chinese,Chowmein
+292,25,Customised Chowmein,Chowmein
+293,25,Veg Biryani,Biryani
+294,25,Fried Rice,Biryani
+295,25,Chicken Biryani,Biryani
+296,25,Mussaman Curry,Curry
+297,25,Pannang Curry,Curry
+298,26,Bidda Boomer,Pizza
+299,26,Garlic Finger ,Pizza
+300,26,Chicken Parm Sliders,Noodles
+301,26,Classic calamari Fritti,Noodles
+302,26,Garden Salad,Salad
+303,26,Caeser Salad,Salad
+304,26,Roasted Garlic Tomato Soup,Soup
+305,26,Italian Wedding Soup,Soup
+306,26,Lasagna ,Pasta
+307,26,Double Bacon Carbonara,Pasta
+308,26,Pesto Penne,Pasta
+309,27,Nami Bao ,Appetizers
+310,27,Potato Pancake,Appetizers
+311,27,Tako Yaki,Appetizers
+312,27,Edamame,Appetizers
+313,27,Shrimp Tempura,Appetizers
+314,28,Masala Dosa,Dosa
+315,28,Uttapam,Dosa
+316,28,Samosa Chaat,Chaat
+317,28,Paneer Masala,Gravy
+318,28,Veg Manchurian,Manchurian
+319,28,Soya Chaap,Chaap
+320,28,Chilli Paneer,Starter
+321,28,Paneer Tikka,Starter
+322,28,Coke,Drinks
+323,28,Canada Dry,Drinks
+324,28,Garlic Naan,Breads
+325,28,ButterNaan,Breads
+326,28,Kerala Paratha,Breads
+327,28,Chicket Biryani,Rice
+328,28,Veg Biryani,Rice
