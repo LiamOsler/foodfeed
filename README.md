@@ -307,6 +307,7 @@ if (isset($_GET["search-query"])) {
 </div>
 ```
 
+## Tagcloud 
 ```php
 <div class = "row">
 
