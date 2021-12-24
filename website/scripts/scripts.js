@@ -56,9 +56,11 @@ function searchReturn(searchString){
 
     $.ajax({url: "pages/landingpage.php", success: function(result){
         $("#page-content").html(result);
+        $("#search-input").val(searchString)
+        showResult(searchString);
     }});
 
-    showResult(searchString);
+
 }
 
 //Functions for calling modals (should be refactored):
