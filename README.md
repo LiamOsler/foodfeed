@@ -20,114 +20,120 @@ Our proposed solution is to develop a web platform that allows consumers to comp
 ```php
 
 <?php
-session_name('legalnews');
-session_start();
-
 include "db/db.php";
 include "db/functions.php"; 
 
+session_name('foodfeed');
+session_start();
 
-//Sanitize the username and password input:
-$usernameInput = sanitizeData($_POST["username"]);
-$passwordInput = sanitizeData($_POST["password"]);
+//Before proceeding, ensure that the posted values are valid for entry in to database:
+$registrationValid = TRUE;
+$email = sanitizeData($_POST["email"]);
+$resultCount = 0;
 
-//echo("userNameInput: ");
-//echo($usernameInput  );
-//echo("<br>");
-//echo("passwordInput: ");
-//echo($passwordInput );
-//echo("<br>");
 
-$passwordInput = md5($passwordInput);
-//Query the users table for the username that was inputted 
-$querySQL = "   SELECT userName, userID, privateID from users 
-                WHERE userName = '{$usernameInput}'";
-$result = $dbconn->query($querySQL);
-$rowcount = mysqli_num_rows($result); 
+if (strlen($email)>0) {
+    $querySQL = "   SELECT `u_email`
+                    FROM `users`
+                    WHERE `u_email` = '{$email}'";
+    $result = $dbconn->query($querySQL);
 
-//If the username isn't found no rows will be returned
-if($rowcount < 1){
-    //If no username found then Set the username or password incorrect value to TRUE
-    $incorrect = TRUE;
-}  
-else{
-    //Get the first result as the current item:
     while ($current = $result->fetch_assoc()){
-        //Set the userID, userName and privateID to their own variables:
-        $userID = $current["userID"];
-        $username = $current["userName"];
-        $privateID = $current["privateID"];
-
-        //echo("userID: ");
-        //echo($userID );
-        //echo("<br>");
-        //echo("username: ");
-        //echo($username );
-        //echo("<br>");
-        //echo("privateID: ");
-        //echo($privateID );
-        //echo("<br>");
-        //Get the user's salt and peppers for password spicing:
-        $querySQL = "   SELECT privateID, userSalt, userPepper from usersaltandpepper 
-                        WHERE privateID = '{$privateID}'";
-        $result = $dbconn->query($querySQL);
-        //Get the first result as the current item:
-        while ($current = $result->fetch_assoc()){
-            //Set the user's salt and peppers to their own variables:
-            $userSalt = $current["userSalt"];
-            $userPepper = $current["userPepper"] ;
-
-            //echo("Salt: ");
-            //echo( $userSalt); 
-            //echo("<br>");
-            //echo("Pepper: ");
-            //echo( $userPepper);
-            //echo("<br>");
-            //echo("Hashed Password Input: ");
-            //echo($passwordInput);
-            //echo("<br>");
-
-            //Conatenate the salt, password input and the pepper together
-            $saltAndPepperPasswordInput = $userSalt . $passwordInput . $userPepper;
-
-            //echo("Salt + Hash + Pepper: ");
-            //echo($saltAndPepperPasswordInput);
-            //echo("<br>");
-
-
-            //Get the MD5 checksum of $saltAndPepperPasswordInput and set it to a variable:
-            $saltAndPepperPasswordInputChecksum = md5($saltAndPepperPasswordInput);
-            //Get the user's hashed password (with salt and pepper) from the database:
-
-            echo($saltAndPepperPasswordInput);
-            
-            $querySQL = "   SELECT privateID, passwordHash from userhashes
-                            WHERE privateID = '{$privateID}'";
-            $result = $dbconn->query($querySQL);
-            while ($current = $result->fetch_assoc()){
-                //Set the user's hashed password to variable:
-                $passwordHash = $current["passwordHash"];
-                //echo($passwordHash);
-            }
-        }
-    }
-    //Check if the hashed input matches the user's hashed password:
-    if($saltAndPepperPasswordInputChecksum == $passwordHash){
-        //If the password is correct, we can set the SESSION userName and userID values:
-        $_SESSION["userName"] = $username;
-        $_SESSION["userID"] = $userID;
-
-        //echo("hello");
-        header("Location: index.php");
-        die();
-    }else{
-        //If password incorrect then Set the username or password incorrect value to TRUE
-        $incorrect = TRUE;
-        
+        $resultCount+=1;
     }
 }
-    if($incorrect){
-        header("Location: loginfailed.php");
-} 
-?>    
-```
+//If the email address exists:
+if($resultCount > 0){
+    $registrationValid = FALSE;
+}
+
+$username = sanitizeData($_POST["username"]);
+$resultCount = 0;
+if (strlen($username)>0) {
+    $querySQL = "   SELECT `u_username`
+                    FROM users
+                    WHERE `u_username` = '{$username}'";
+    $result = $dbconn->query($querySQL);
+
+    while ($current = $result->fetch_assoc()){
+        $resultCount+=1;
+    }
+}
+//If the username address exists:
+if($resultCount > 0){
+    $registrationValid = FALSE;
+}
+
+//Otherwise let the user register:
+if($registrationValid == TRUE){
+    $password = sanitizeData($_POST["password"]);
+    
+    $phone = sanitizeData($_POST["phone"]);
+    $f_name = sanitizeData($_POST["f_name"]);
+    $l_name = sanitizeData($_POST["l_name"]);
+    $street = sanitizeData($_POST["street"]);
+    $city = sanitizeData($_POST["city"]);
+    $province = sanitizeData($_POST["province"]);
+    $postal = sanitizeData($_POST["postal"]);
+
+    echo $password . "<br>";
+    echo $username . "<br>";
+    echo $email . "<br>";
+    echo $phone . "<br>";
+    echo $f_name . "<br>";
+    echo $l_name . "<br>";
+    echo $street . "<br>";
+    echo $city . "<br>";
+    echo $postal . "<br>";
+
+
+    
+
+    $querySQL = "   INSERT INTO `users` VALUES
+                    (NULL, MD5(UUID()), '{$username}', '{$email}', '{$phone}','{$f_name}','{$l_name}', NULL, NULL, '{$street}', '{$city}', '{$province}', '{$postal}', CURRENT_TIMESTAMP, FALSE)";
+
+    $result = $dbconn->query($querySQL);
+
+    echo "hello";
+
+    $querySQL = "   SELECT `u_username`, `u_id`, `u_private_id`
+                    FROM `users`
+                    WHERE `u_username` = '{$username}'";
+    $result = $dbconn->query($querySQL);
+
+    while ($current = $result->fetch_assoc()){
+        $_SESSION["userID"] = $current["u_id"];
+
+        $privateID = $current["u_private_id"];
+        
+        $querySQL = "   INSERT INTO `user_salt` VALUES 
+                        ('{$privateID}', LEFT(MD5(UUID()), 8), LEFT(MD5(UUID()), 8))
+                    ";
+        $dbconn->query($querySQL);
+
+        $querySQL = "   SELECT `u_salt`, `u_pepper`, `u_private_id`
+                        FROM `user_salt`
+                        WHERE `u_private_id` = '{$privateID}'";
+        $saltresult = $dbconn->query($querySQL);
+
+        while ($saltcurrent = $saltresult->fetch_assoc()){
+            $userSalt = $saltcurrent["u_salt"];
+            $userPepper = $saltcurrent["u_pepper"]; 
+            
+            $querySQL = "   INSERT INTO `user_hashes` VALUES
+                            ('{$privateID}', MD5(CONCAT('{$userSalt}', MD5('{$password}'), '{$userPepper}')))";
+                        
+            $_SESSION["username"] = $username;
+
+            $dbconn->query($querySQL);
+            $dbconn->close();
+        }
+    }
+
+}
+
+header("Location: index.php");
+
+?>
+
+``` 
