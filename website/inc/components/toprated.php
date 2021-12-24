@@ -28,10 +28,11 @@
         $r_hour_open = $current["r_hour_open"];
         $r_hour_close = $current["r_hour_close"];
         $r_rating = $current["r_rating"];
+        $r_img = $current["r_img"];
         ?>
             <div class = "col-sm-6 col-md-3 col-lg-3 col-xl-3 py-20 mb-4">
                 <div class="card h-100 text-center">
-                    <img class="card-img-top" src="images/hotsauce.png" alt="Card image cap">
+                    <div class="img" style="background-image:url('images/restaurants/<?php echo $r_img;?>')"></div>
                     <div class="card-body card-search-results">
                     <h5 class="card-title"><?php echo $r_name;?></h5>
                     <p class="card-text"><?php echo $r_category;?></p>

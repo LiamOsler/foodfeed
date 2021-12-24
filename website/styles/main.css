@@ -83,3 +83,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.btn-success{
+  color: white !important;
+}
