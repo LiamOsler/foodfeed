@@ -11,12 +11,13 @@
 			?>
 				<li class="nav-item nav-link dropdown">
 					<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<i class="bi-person-circle"></i>
+					<i class="bi-person-circle"></i> <?php echo $_SESSION["userName"] ?>
 					</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a class="dropdown-item" href="#"><i class="bi-geo-alt-fill"></i> Default Location</a>
 						<a class="dropdown-item" href="#"><i class="bi-credit-card"></i> Payment Info</a>
 						<a class="dropdown-item" href="#"><i class="bi-telephone"></i> Contact Info</a>
+						<a class="dropdown-item" href="logout.php"><i class="bi-door-open"></i> Logout</a>
 					</div>
 				</li>
 			<?php
