@@ -28,7 +28,7 @@
 					<i class="bi-person-circle"></i> User
 					</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a class="dropdown-item" href="#"><i class="bi-key"></i> Login</a>
+						<a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal"><i class="bi-key"></i> Login</a>
 						<a class="dropdown-item" href="#" data-toggle="modal" data-target="#newAccountModal"><i class="bi-person-plus"></i> Register</a>
 					</div>
 				</li>
