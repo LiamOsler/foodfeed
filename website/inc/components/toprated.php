@@ -38,7 +38,7 @@
                     <p class="card-text"><?php echo $r_category;?></p>
                     </div>  
                     <div class="card-footer mt-auto">
-                      <a id = "#test" type="button" class="btn btn-success" onclick = "viewRestaurant(<?php echo $r_id?>, '' )">View Menu</a>
+                      <a id = "#test" type="button" class="btn btn-light" onclick = "viewRestaurant(<?php echo $r_id?>, '' )">View Menu</a>
                     </div>
                 </div>
             </div>        
