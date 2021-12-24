@@ -17,6 +17,7 @@ $(document).ready(function(){
             $("#page-content").html(result);
         }});
     });
+    
 
 });
 
@@ -54,11 +55,13 @@ function searchReturn(searchString){
         $("#search-input").val(searchString)
         showResult(searchString);
     }});
-
-
 }
 
 //Functions for calling modals (should be refactored):
+function toggleLoginModal(){
+    $('#loginModal').modal('toggle');
+}
+
 function toggleLoginModal(){
     $('#loginModal').modal('toggle');
 }

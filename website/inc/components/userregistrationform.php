@@ -45,7 +45,7 @@ function showEmailResult(str) {
 </script>
 
 <form action = "userregistration.php" method = "POST">
-    <h5><i class="bi bi-person-lines-fill"></i> About you</h5>
+    <h5><i class="bi bi-person-lines-fill"></i> About You</h5>
     <div class="form-row">
         <div class="col-md-6 mb-6">
             <label for="validationf_name">First name</label>
@@ -131,6 +131,8 @@ function showEmailResult(str) {
         </label>
         </div>
     </div>
+    <div class="text-center">
     <button class="btn btn-info btn-lg" type="submit">Create Account <i class="bi-person-plus"></i></button>
+    </div>
 </form>
 
